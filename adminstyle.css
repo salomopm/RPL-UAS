@@ -1,0 +1,51 @@
+.dashboard-text{
+    padding-top: 70px;
+    padding-left:20px;
+}
+
+.svg-container-people{
+    width: 100px;
+    height: 100px;
+    transform: translate(250px,5px);
+}
+
+
+.card-body{
+    display: flex ;
+}
+
+.total-user-text{
+    padding-left: 38%;
+
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.card1{
+    padding-left: 23px;
+    padding-top: 50px;
+
+}
+
+.card2{
+    padding-left: 23px;
+    padding-top: 50px;
+
+}
+
+.card3{
+    padding-left: 23px;
+    padding-top: 50px;
+    display: flex;
+}
+
+.total-user-angka{
+    padding-left: 100px;
+    font-weight: bolder;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.row1{
+    display: flex;
+}
