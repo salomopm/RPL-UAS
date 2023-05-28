@@ -1,6 +1,6 @@
 <?php
 require 'db_functions.php';
-$db_mahasiswaunsharing = query('SELECT * FROM db_mahasiswaunsharing');
+$db_informasi = query('SELECT * FROM db_informasi');
 
 ?>
 
@@ -13,31 +13,28 @@ $db_mahasiswaunsharing = query('SELECT * FROM db_mahasiswaunsharing');
     <title>Manajemen Mahasiswa</title>
 </head>
 <body>
-    <h1>Data Mahasiswa</h1>
+    <h1>Data Informasi</h1>
 
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <td>No.</td>
             <td>Aksi</td>
-            <td>Nama</td>
-            <td>Prodi</td>
-            <td>Fakultas</td>
-            <td>Email</td>
-            <td>Kata Sandi</td>
+            <td>Deskripsi</td>
+            <td>Gambar</td>
         </tr>
         <tr>
             <?php $i = 1; ?>
-            <?php foreach ($db_mahasiswaunsharing as $row) : ?>
+            <?php foreach ($db_informasi as $row) : ?>
             <td><?=$i; ?></td>
             <td>
                 <a href="ubahmahasiswa.php?id=<?=$row["id"];?>">Ubah</a>
                 <a href="hapusmahasiswa.php?id=<?=$row["id"];?>" onclick="return confirm('Apakah data akan dihapus?');">Hapus</a>
             </td>
-            <td><?= $row["nama"]?></td>
-            <td><?= $row["prodi"]?></td>
-            <td><?= $row["fakultas"]?></td>
-            <td><?= $row["email"]?></td>
-            <td><?= $row["password"]?></td>
+            <td><?= $row["deskripsi"]?></td>
+            <td>
+                <img src="image/<?= $row["gambar"]?>" alt="none" width="80px" height="60px">
+                
+            </td>
         </tr>
             <?php $i++;?>
             <?php endforeach;?>
