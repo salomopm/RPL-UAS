@@ -63,7 +63,7 @@ $db_informasi = query('SELECT * FROM db_informasi');
             <td><?=$i; ?></td>
             <td>
                 <a href="ubahinformasi.php?id=<?=$row["id"];?>">Ubah</a>
-                <a href="hapusinformasi.php?id=<?=$row["id"];?>" onclick="return confirm('Apakah data akan dihapus?');">Hapus</a>
+                <a href="hapusinfo.php?id=<?=$row["id"];?>" onclick="return confirm('Apakah data akan dihapus?');">Hapus</a>
             </td>
             <td><?= $row["deskripsi"]?></td>
             <td>

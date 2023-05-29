@@ -141,6 +141,11 @@ function hapus($id){
     return mysqli_affected_rows($conn);
 }
 
+function hapusInfo($id){
+    global $conn;
 
+    mysqli_query($conn, "DELETE FROM db_informasi WHERE id=$id");
+    return mysqli_affected_rows($conn);
+}
 
 ?>
