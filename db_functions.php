@@ -50,6 +50,27 @@ function tambahInformasi($data){
     return mysqli_affected_rows($conn);
 }
 
+function ubahInfo($data){
+    global $conn;
+
+    $id=$data["id"];
+    $yourDeskripsi = htmlspecialchars($data["yourDeskripsi"]);
+    $yourGambar = upload();
+    if(!$yourGambar){
+        return false;
+    }
+
+    $query = "UPDATE db_informasi SET 
+    deskripsi='$yourDeskripsi',
+    gambar='$yourGambar'
+    WHERE id=$id
+    ";
+
+    mysqli_query($conn,$query);
+
+    return mysqli_affected_rows($conn);
+}
+
 function upload(){
     $namaFile = $_FILES['yourGambar']['name'];
     $ukuranFile = $_FILES['yourGambar']['size'];
@@ -119,5 +140,7 @@ function hapus($id){
     mysqli_query($conn, "DELETE FROM db_mahasiswaunsharing WHERE id=$id");
     return mysqli_affected_rows($conn);
 }
+
+
 
 ?>
