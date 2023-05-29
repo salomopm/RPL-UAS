@@ -1,6 +1,12 @@
 .dashboard-text{
-    padding-top: 70px;
-    padding-left:20px;
+    padding-top: 150px;
+    padding-left:300px;
+    font-size: 300%;
+    font-weight: bold;
+}
+
+.dashboard{
+    display: flex;
 }
 
 .svg-container-people{
@@ -60,4 +66,132 @@
 
 .row1{
     display: flex;
+}
+
+.nav-link1{
+    padding-left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-link2{
+    padding-left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-link3{
+    padding-left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-link4{
+    padding-left: 180px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.dashboard-img{
+
+    height: 500px;
+    padding-left: 300px;
+    padding-top: 100px;
+
+}
+
+#navbar-unggah{
+    background: #82DCE5;
+}
+
+.nav-link-sidebar1{
+    display: flex;
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+.home-image{
+    size: 100%;
+}
+
+.side-navbar{
+    padding-right: 60px;
+}
+
+.nav-link-sidebar2{
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 100px;
+    display: flex;
+}
+
+.nav-link-sidebar3{
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 100px;
+    display: flex;
+}
+
+.nav-link-sidebar4{
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 100px;
+    display: flex;
+}
+
+.nav-link-sidebar5{
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 100px;
+    display: flex;
+}
+
+.nav-link-admin{
+    padding-left: 700px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+}
+
+.dashboard-unggah{
+    display: flex;
+}
+
+.isi-tengah-unggahinfo{
+    padding-right: 1090px;
+    padding-bottom: 500px;
+    padding-top: 20px;
+    background-color: #D0EAE6;
+}
+
+.text-dashboard{
+    padding-left: 20px;
+}
+
+.isi-tengah-maninfo{
+    padding-right: 800px;
+    padding-bottom: 700px;
+    padding-top: 20px;
+    background-color: #D0EAE6;
+}
+
+.isi-tengah-manmah{
+    padding-right: 1090px;
+    padding-bottom: 700px;
+    padding-top: 20px;
+    background-color: #D0EAE6;
+}
+
+.isi-tengah-ubahmahasiswa{
+    padding-right: 1120px;
+    padding-bottom: 700px;
+    padding-top: 20px;
+    background-color: #D0EAE6;
+}
+
+.isi-tengah-ubahinfo{
+    padding-right: 1120px;
+    padding-bottom: 700px;
+    padding-top: 20px;
+    background-color: #D0EAE6;
 }
