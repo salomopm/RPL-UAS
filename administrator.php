@@ -12,7 +12,7 @@ require 'db_functions.php';
     <link rel="stylesheet" href="/assets/css/adminstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
-<body style="background:url('assets/img/bg-admin.jpg') no-repeat; background-size: 2000px 1000px;overflow-x: hidden;">
+<body style="background:url('assets/img/bg-admin.jpg') no-repeat; background-size: 2000px 1000px;overflow-x: hidden;" class="body-administrator">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
