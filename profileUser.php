@@ -66,12 +66,12 @@ if (!isset($_SESSION['username'])) {
             <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
               <i class="bi bi-bell"></i>
 
-              <span class="badge bg-primary badge-number">4</span>
+              <span class="badge bg-primary badge-number" id="noti_number"></span>
             </a><!-- End Notification Icon -->
 
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-              <li class="dropdown-header">
-                You have 4 new notifications
+              <li class="dropdown-header" id="noti_number">
+                
 
                 <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
               </li>
@@ -301,5 +301,28 @@ if (!isset($_SESSION['username'])) {
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Notifications JS File -->
+    <script type="text/javascript">
+      function loadDoc() {
+        
+
+        setInterval(function(){
+
+          var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("noti_number").innerHTML = this.responseText;
+              }
+            };
+            xhttp.open("GET", "data.php", true);
+            xhttp.send();
+
+        },1000);
+
+
+      }
+      loadDoc();
+    </script>
   </body>
 </html>

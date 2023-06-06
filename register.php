@@ -25,13 +25,14 @@ if (isset($_POST['submit'])) {
             $sql = "INSERT INTO db_mahasiswaunsharing VALUES ('','$nama', '$prodi', '$fakultas', '$email', '$password')";
             $result = mysqli_query($conn, $sql);
             if ($result) {
-                echo "<script>alert('Selamat, registrasi berhasil!')</script>";
                 $nama = "";
                 $prodi = "";
                 $fakultas = "";
                 $email = "";
                 $_POST['password'] = "";
                 $_POST['cpassword'] = "";
+                header("Location: login.php");
+                echo "<script>alert('Selamat, registrasi berhasil!')</script>";
             } else {
                 echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
             }

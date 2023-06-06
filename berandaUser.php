@@ -55,10 +55,13 @@ if (!isset($_SESSION['username'])) {
 
       <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
+          <?php foreach($db_informasi as $row) :?>
+          <?php if($row["nama"]==$_SESSION["username"]) {?>
           <li class="nav-item dropdown">
             <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
               <i class="bi bi-bell"></i>
-
+              <?php } ?>
+              <?php endforeach;?>
               <span class="badge bg-primary badge-number">1</span>
             </a><!-- End Notification Icon -->
 
