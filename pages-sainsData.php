@@ -16,15 +16,15 @@ if (!isset($_SESSION['username'])) {
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-        <title>Informasi-Prodi</title>
+        <title>sains-data-uns-sharing</title>
 
         <meta content="" name="description">
         <meta content="" name="keywords">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Favicons -->
-        <link href="assets/img/favicon.png" rel="icon">
-        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="assets/img/unsLogo.png" rel="icon">
+        <link href="assets/img/unsLogo.png" rel="apple-touch-icon">
   
         <!-- Google Fonts -->
         <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
       <header id="header" class="header fixed-top d-flex align-items-center">
         <div class="d-flex align-items-center justify-content-between">
           <a class="logo d-flex align-items-center">
-            <img src="assets/img/unsLogo.png" alt="">
+            <img src="assets/img/uns-sharing.png" alt="">
 
             <span class="d-none d-lg-block">UNS Sharing</span>
           </a>
@@ -102,7 +102,27 @@ if (!isset($_SESSION['username'])) {
         </nav><!-- End Icons Navigation -->
       </header><!-- End Header -->  
       
-      
+      <!-- ======= Sidebar ======= -->
+      <aside id="sidebar" class="sidebar">
+        <ul class="sidebar-nav" id="sidebar-nav">
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="berandaUser.php">
+              <img src="assets/img/berandaLogo.png" alt="" height="20" width="20">
+
+              <span>Beranda</span>
+            </a>
+          </li><!-- End Beranda Nav -->
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="logout.php">
+              <img src="assets/img/keluarImg.png" alt="" height="20" width="20">
+
+              <span>Keluar</span>
+            </a>
+          </li><!-- End Keluar Page Nav -->
+        </ul>
+
+      </aside><!-- End Sidebar-->
 
         <main id="main" class="main">
           <?php $i = 1; ?>

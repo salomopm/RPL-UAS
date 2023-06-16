@@ -14,14 +14,14 @@ if (!isset($_SESSION['username'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Beranda-UNS-Sharing</title>
+    <title>fakultas-prodi-uns-sharing</title>
 
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/unsLogo.png" rel="icon">
+    <link href="assets/img/unsLogo.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -45,7 +45,7 @@ if (!isset($_SESSION['username'])) {
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div class="d-flex align-items-center justify-content-between">
         <a class="logo d-flex align-items-center">
-          <img src="assets/img/unsLogo.png" alt="">
+          <img src="assets/img/uns-sharing.png" alt="">
 
           <span class="d-none d-lg-block">UNS Sharing</span>
         </a>
@@ -59,11 +59,42 @@ if (!isset($_SESSION['username'])) {
             <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
               <i class="bi bi-bell"></i>
 
-              <span class="badge bg-primary badge-number" id="noti_number"></span>
+              <span class="badge bg-primary badge-number">?</span>
             </a><!-- End Notification Icon -->
 
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+              <li class="dropdown-header">
+                Ada informasi
 
-          </li><!-- End Notification Nav -->
+                <a href="pages-sainsData.php"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <!--<li class="notification-item">
+                <i class="bi bi-exclamation-circle text-warning"></i>
+
+                <div>
+                  <h4>Lorem Ipsum</h4>
+
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>30 min. ago</p>
+                </div>
+              </li>-->
+
+              
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="dropdown-footer">
+                <a href="pages-sainsData.php">Tampilkan informasi</a>
+              </li>
+            </ul> <!-- End Notification Dropdown Items -->
+          <!--</li>--><!-- End Notification Nav -->
 
           <li class="nav-item dropdown pe-3">
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -145,13 +176,6 @@ if (!isset($_SESSION['username'])) {
     <main id="main" class="main">
       <div class="pagetitle">
         <h1>Fakultas</h1>
-
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="berandaUser.php">Home</a></li>
-            <li class="breadcrumb-item active">Fakultas</li>
-          </ol>
-        </nav>
       </div><!-- End Page Title -->
 
       <section class="section dashboard">
@@ -169,8 +193,8 @@ if (!isset($_SESSION['username'])) {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                        <!--<div class="accordion accordion-flush" id="accordionFlushExample">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -185,8 +209,8 @@ if (!isset($_SESSION['username'])) {
                                 <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
                               </div>
                             </div>
-                          </div>
-                      </td>
+                          </div>-->
+                      
                     </tr>
 
                     <tr>
@@ -486,28 +510,5 @@ if (!isset($_SESSION['username'])) {
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
-    <!-- JS Notif -->
-    <script type="text/javascript">
-      function loadDoc() {
-        
-
-        setInterval(function(){
-
-          var xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("noti_number").innerHTML = this.responseText;
-            }
-          };
-          xhttp.open("GET", "data.php", true);
-          xhttp.send();
-
-        },1000);
-
-
-      }
-      loadDoc();
-    </script>
   </body>
 </html>

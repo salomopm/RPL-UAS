@@ -524,7 +524,7 @@ h6 {
 }
 
 .header-nav .notifications .notification-item:hover {
-  background-color: #06BACB;
+  background-color: red;
 }
 
 .header-nav .messages {
@@ -559,7 +559,7 @@ h6 {
 }
 
 .header-nav .messages .message-item:hover {
-  background-color: #06BACB;
+  background-color: red;
 }
 
 .header-nav .profile {

@@ -21,14 +21,14 @@ if (!isset($_SESSION['username'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Users / Profile - NiceAdmin Bootstrap Template</title>
+    <title>profil-uns-sharing</title>
 
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/unsLogo.png" rel="icon">
+    <link href="assets/img/unsLogo.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -52,7 +52,7 @@ if (!isset($_SESSION['username'])) {
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div class="d-flex align-items-center justify-content-between">
         <a class="logo d-flex align-items-center">
-          <img src="assets/img/unsLogo.png" alt="">
+          <img src="assets/img/uns-sharing.png" alt="">
 
           <span class="d-none d-lg-block">UNS Sharing</span>
         </a>
@@ -66,84 +66,39 @@ if (!isset($_SESSION['username'])) {
             <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
               <i class="bi bi-bell"></i>
 
-              <span class="badge bg-primary badge-number" id="noti_number"></span>
+              <span class="badge bg-primary badge-number">?</span>
             </a><!-- End Notification Icon -->
 
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-              <li class="dropdown-header" id="noti_number">
-                
+              <li class="dropdown-header">
+                Ada informasi
 
-                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                <a href="pages-sainsData.php"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
               </li>
 
               <li>
                 <hr class="dropdown-divider">
               </li>
 
-              <li class="notification-item">
+              <!--<li class="notification-item">
                 <i class="bi bi-exclamation-circle text-warning"></i>
 
                 <div>
                   <h4>Lorem Ipsum</h4>
 
                   <p>Quae dolorem earum veritatis oditseno</p>
-
                   <p>30 min. ago</p>
                 </div>
-              </li>
-
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-
-              <li class="notification-item">
-                <i class="bi bi-x-circle text-danger"></i>
-                <div>
-                  <h4>Atque rerum nesciunt</h4>
-
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>1 hr. ago</p>
-                </div>
-              </li>
-
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-
-              <li class="notification-item">
-                <i class="bi bi-check-circle text-success"></i>
-
-                <div>
-                  <h4>Sit rerum fuga</h4>
-
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>2 hrs. ago</p>
-                </div>
-              </li>
-
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-
-              <li class="notification-item">
-                <i class="bi bi-info-circle text-primary"></i>
-
-                <div>
-                  <h4>Dicta reprehenderit</h4>
-
-                  <p>Quae dolorem earum veritatis oditseno</p>
-                  <p>4 hrs. ago</p>
-                </div>
-              </li>
+              </li>-->
 
               <li>
                 <hr class="dropdown-divider">
               </li>
               <li class="dropdown-footer">
-                <a href="#">Show all notifications</a>
+                <a href="pages-sainsData.php">Tampilkan informasi</a>
               </li>
             </ul><!-- End Notification Dropdown Items -->
-          </li><!-- End Notification Nav -->
+          <!--</li>--><!-- End Notification Nav -->
 
           <li class="nav-item dropdown pe-3">
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -165,7 +120,7 @@ if (!isset($_SESSION['username'])) {
                 <a class="dropdown-item d-flex align-items-center" href="profileUser.php">
                   <i class="bi bi-person"></i>
 
-                  <span>Akun saya</span>
+                  <span>Profil saya</span>
                 </a>
               </li>
 
@@ -201,7 +156,7 @@ if (!isset($_SESSION['username'])) {
           <a class="nav-link collapsed" href="profileUser.php">
             <img src="assets/img/profil-logo.png" alt="" height="20" width="20">
 
-            <span>Profile</span>
+            <span>Profil</span>
           </a>
         </li><!-- End Profile Page Nav -->
 
@@ -228,13 +183,6 @@ if (!isset($_SESSION['username'])) {
 
       <div class="pagetitle">
         <h1>Profil</h1>
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="berandaUser.php">Home</a></li>
-
-            <li class="breadcrumb-item active">Profil</li>
-          </ol>
-        </nav>
       </div><!-- End Page Title -->
 
       <section class="section profile">
@@ -301,28 +249,5 @@ if (!isset($_SESSION['username'])) {
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
-    <!-- Notifications JS File -->
-    <script type="text/javascript">
-      function loadDoc() {
-        
-
-        setInterval(function(){
-
-          var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-              document.getElementById("noti_number").innerHTML = this.responseText;
-              }
-            };
-            xhttp.open("GET", "data.php", true);
-            xhttp.send();
-
-        },1000);
-
-
-      }
-      loadDoc();
-    </script>
   </body>
 </html>

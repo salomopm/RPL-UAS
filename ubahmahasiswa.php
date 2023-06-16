@@ -104,35 +104,35 @@ if(isset($_POST["submit"])){
             </nav>
         </div>
         <div class="isi-tengah-ubahmahasiswa">
-            <div class="text-dashboard">
-                <h1 class="ubah-data-mahasiswa">Ubah Data Mahasiswa</h1>
-                <form action="" method="post">
-                    <input type="hidden" name="id" value="<?=$db_mahasiswaunsharing["id"];?>">
+        <div class="text-dashboard">
+            <h1 class="ubah-data-mahasiswa">Ubah Data Mahasiswa</h1>
+            <form action="" method="post">
+                <input type="hidden" name="id" value="<?=$db_mahasiswaunsharing["id"];?>">
 
-                    <div class="mb-3">
-                        <label for="yourName" class="form-label">Nama</label>
-                        <input type="text" name="yourName" class="form-control" id="yourName" value="<?=$db_mahasiswaunsharing["nama"]?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="yourProdi" class="form-label">Prodi</label>
-                        <input type="text" name="yourProdi" class="form-control" id="yourProdi" value="<?=$db_mahasiswaunsharing["prodi"]?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="yourFakultas" class="form-label">Fakultas</label>
-                        <input type="text" name="yourFakultas" class="form-control" id="yourFakultas" value="<?=$db_mahasiswaunsharing["fakultas"]?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="yourEmail" class="form-label">Email</label>
-                        <input type="text" name="yourEmail" class="form-control" id="yourEmail" value="<?=$db_mahasiswaunsharing["email"]?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="yourPassword" class="form-label">Password</label>
-                        <input type="text" name="yourPassword" class="form-control" id="yourPassword"value="<?=$db_mahasiswaunsharing["password"]?>">
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+                <div class="mb-3">
+                    <label for="yourName" class="form-label">Nama</label>
+                    <input type="text" name="yourName" class="form-control" id="yourName" value="<?=$db_mahasiswaunsharing["nama"]?>">
+                </div>
+                <div class="mb-3">
+                    <label for="yourProdi" class="form-label">Prodi</label>
+                    <input type="text" name="yourProdi" class="form-control" id="yourProdi" value="<?=$db_mahasiswaunsharing["prodi"]?>">
+                </div>
+                <div class="mb-3">
+                    <label for="yourFakultas" class="form-label">Fakultas</label>
+                    <input type="text" name="yourFakultas" class="form-control" id="yourFakultas" value="<?=$db_mahasiswaunsharing["fakultas"]?>">
+                </div>
+                <div class="mb-3">
+                    <label for="yourEmail" class="form-label">Email</label>
+                    <input type="text" name="yourEmail" class="form-control" id="yourEmail" value="<?=$db_mahasiswaunsharing["email"]?>">
+                </div>
+                <div class="mb-3">
+                    <label for="yourPassword" class="form-label">Password</label>
+                    <input type="text" name="yourPassword" class="form-control" id="yourPassword"value="<?=$db_mahasiswaunsharing["password"]?>">
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
+    </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

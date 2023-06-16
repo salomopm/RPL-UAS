@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Beranda-UNS-Sharing</title>
+    <title>beranda-uns-sharing</title>
 
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -45,7 +45,7 @@ if (!isset($_SESSION['username'])) {
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div class="d-flex align-items-center justify-content-between">
         <a class="logo d-flex align-items-center">
-          <img src="assets/img/unsLogo0.png" alt="">
+          <img src="assets/img/uns-sharing.png" alt="">
 
           <span class="d-none d-lg-block">UNS Sharing</span>
         </a>
@@ -55,28 +55,25 @@ if (!isset($_SESSION['username'])) {
 
       <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
-          <?php foreach($db_informasi as $row) :?>
-          <?php if($row["nama"]==$_SESSION["username"]) {?>
           <li class="nav-item dropdown">
             <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
               <i class="bi bi-bell"></i>
-              <?php } ?>
-              <?php endforeach;?>
-              <span class="badge bg-primary badge-number">1</span>
-            </a><!-- End Notification Icon -->
+
+              <span class="badge bg-primary badge-number">?</span>
+            </a> <!-- End Notification Icon -->
 
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
               <li class="dropdown-header">
-                You have 1 new notifications
+                Ada informasi
 
-                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                <a href="pages-sainsData.php"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
               </li>
 
               <li>
                 <hr class="dropdown-divider">
               </li>
 
-              <li class="notification-item">
+              <!--<li class="notification-item">
                 <i class="bi bi-exclamation-circle text-warning"></i>
 
                 <div>
@@ -85,7 +82,7 @@ if (!isset($_SESSION['username'])) {
                   <p>Quae dolorem earum veritatis oditseno</p>
                   <p>30 min. ago</p>
                 </div>
-              </li>
+              </li>-->
 
               <li>
                 <hr class="dropdown-divider">
@@ -98,10 +95,10 @@ if (!isset($_SESSION['username'])) {
               </li>
 
               <li class="dropdown-footer">
-                <a href="#">Show all notifications</a>
+                <a href="pages-sainsData.php">Tampilkan informasi</a>
               </li>
-            </ul><!-- End Notification Dropdown Items -->
-          </li><!-- End Notification Nav -->
+            </ul> <!-- End Notification Dropdown Items -->
+          <!--</li> --> <!-- End Notification Nav --> 
 
           <li class="nav-item dropdown pe-3">
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -123,7 +120,7 @@ if (!isset($_SESSION['username'])) {
                 <a class="dropdown-item d-flex align-items-center" href="profileUser.php">
                   <i class="bi bi-person"></i>
 
-                  <span>Akun saya</span>
+                  <span>Profil saya</span>
                 </a>
               </li>
 
@@ -159,7 +156,7 @@ if (!isset($_SESSION['username'])) {
           <a class="nav-link collapsed" href="profileUser.php">
             <img src="assets/img/profil-logo.png" alt="" height="20" width="20">
 
-            <span>Profile</span>
+            <span>Profil</span>
           </a>
         </li><!-- End Profile Page Nav -->
 
@@ -185,12 +182,7 @@ if (!isset($_SESSION['username'])) {
       <div class="pagetitle">
         <h1>Beranda</h1>
 
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="berandaUser.html">Home</a></li>
-            <li class="breadcrumb-item active">Beranda</li>
-          </ol>
-        </nav>
+        
       </div><!-- End Page Title -->
 
       <section class="section dashboard">
@@ -200,11 +192,335 @@ if (!isset($_SESSION['username'])) {
               <h2 class="card-title" style="text-align: justify;">Selamat datang di UNS Sharing</h2>
 
               <p style="text-align: justify;">
-                Web aplikasi UNS SHARING ini dirancang untuk memfasilitasi segala pihak yang terlibat, yaitu  mahasiswa dan admin prodi, di mana mahasiswa sebagai pengguna dapat mengakses informasi yang diunggah oleh admin prodi. Dengan fitur notifikasi yang ada, dapat mengingatkan serta memudahkan pengguna sebagai mahasiswa memperoleh informasi yang aktual terkait prodinya.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur dolorum perspiciatis fugiat, deserunt dolorem fuga assumenda eius, praesentium vitae, obcaecati corrupti sit aliquid eum voluptatum iure facere doloribus. Error, soluta?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iste id atque cum, accusantium possimus sapiente incidunt fugit. Voluptatum expedita nesciunt architecto cum debitis eius nam error veritatis aperiam id.
               </p>
             </div>
           </div>
         </div>
+      </section>
+    </main><!-- End #main -->
+
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Fakultas</h1>
+      </div><!-- End Page Title -->
+
+      <section class="section dashboard">
+        <div class="col-12">
+          <div class="card recent-sales overflow-auto">
+            <div class="card-body">
+              <h5 class="card-title">Fakultas dan Prodi</h5>
+
+              <div class="datatable-container">
+                <table class="table table-borderless datatable datatable-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nama Fakultas</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+
+                        <!--<div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Ekonomi dan Bisnis
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>-->
+                      
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Hukum
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Ilmu Budaya
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">Prodi Bahasa Mandarin dan Kebudayaan Tiongkok</a>
+                                <a href="#" class="list-group-item list-group-item-action">Prodi Ilmu Sejarah</a>
+                                <a href="#" class="list-group-item list-group-item-action">Prodi Sastra Arab</a>
+                                <a href="#" class="list-group-item list-group-item-action">Prodi Sastra Daerah</a>
+                                <a href="#" class="list-group-item list-group-item-action">Prodi Sastra Indonesia</a>
+                                <a href="#" class="list-group-item list-group-item-action">Prodi Sastra Inggris</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Ilmu Sosial dan Ilmu Politik
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a  href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Kedokteran
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Keguruan dan Ilmu Pendidikan
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Keolahragaan
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Matematika dan Ilmu Pengetahuan Alam
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Pertanian
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Peternakan
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Psikologi
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Seni Rupa dan Desain
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Teknik
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Fakultas Teknologi Informasi dan Sains Data
+                              </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="list-group">
+                                <a href="pages-sainsData.php" class="list-group-item list-group-item-action">Prodi Sains Data</a>
+                                <a href="#" class="list-group-item list-group-item-action">Prodi Teknologi Informasi</a>
+                              </div>
+                            </div>
+                          </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Recent Sales -->
       </section>
     </main><!-- End #main -->
 
