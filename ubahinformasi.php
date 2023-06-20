@@ -118,6 +118,20 @@ if(isset($_POST["submit"])){
                         <label for="yourGambar" class="form-label">Gambar</label>
                         <input type="file" name="yourGambar" class="form-control" id="yourGambar" value="<?=$db_informasi["yourGambar"]?>">
                     </div>
+                    <div class="mb-3">
+                    <label for="yourGambar" class="form-label">Prodi</label>
+                    <select class="form-select" aria-label="Default select example" id="yourProdi" name="yourProdi">
+                        <option selected disabled>Choose Prodi</option>
+                        <option value="<?=$db_informasi["prodi"] = "Informatika"?>">Informatika</option>
+                        <option value="<?=$db_informasi["prodi"] = "Biologi"?>">Biologi</option>
+                        <option value="<?=$db_informasi["prodi"] = "Kimia"?>">Kimia</option>
+                        <option value="<?=$db_informasi["prodi"] = "Matematika"?>">Matematika</option>
+                    </select>
+                    </div>
+                    <div class="mb-3 waktu-ubah">
+                        <label for="yourWaktu" class="form-label">Waktu</label>
+                        <input id="yourWaktu" class="form-control" type="datetime-local" name="yourWaktu" value="<?=$db_informasi["yourWaktu"]?>"/>
+                    </div>
                     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

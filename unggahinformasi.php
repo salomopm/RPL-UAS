@@ -109,6 +109,21 @@ if(isset($_POST["submit"])){
                         <label for="yourGambar" class="form-label">Gambar</label>
                         <input type="file" name="yourGambar" class="form-control" id="yourProdi">
                     </div>
+                    <div class="mb-3">
+                    <label for="yourProdi" class="form-label">Prodi</label>
+                    <select class="form-select" aria-label="Default select example" name="yourProdi" id="yourProdi">
+                        <option selected disabled>Choose Prodi</option>
+                        <option value="Informatika">Informatika</option>
+                        <option value="Biologi">Biologi</option>
+                        <option value="Kimia">Kimia</option>
+                        <option value="Matematika">Matematika</option>
+                    </select>
+                    </div>
+                    <div class="mb-3 waktu-ubah">
+                        <label for="yourWaktu" class="form-label">Waktu</label>
+                        <input id="yourWaktu" class="form-control" type="datetime-local" name="yourWaktu"/>
+                    </div>
+                    
                     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                 </form>
                 </div>

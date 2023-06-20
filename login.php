@@ -3,10 +3,10 @@
 include 'config.php';
  
 error_reporting(0);
- 
+session_reset();
 session_start();
  
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username']) && isset($_SESSION['prodiIndicator'])) {
     header("Location: berandaUser.php");
 }
  
@@ -18,12 +18,13 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
     if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
-        if($row['nama'] == "admin"){
+        if($row['roleAs'] == "admin"){
             $_SESSION['username'] = $row['nama'];
             header("Location: administrator.php");
 
         }else{
             $_SESSION['username'] = $row['nama'];
+            $_SESSION['prodiIndicator'] = $row['prodi'];
             header("Location: berandaUser.php");
         
         }
@@ -31,7 +32,7 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
     }
 }
- 
+
 ?>
  
 <!DOCTYPE html>

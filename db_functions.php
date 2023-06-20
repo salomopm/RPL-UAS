@@ -36,14 +36,15 @@ function tambahInformasi($data){
     global $conn;
 
     $yourDeskripsi = htmlspecialchars($data["yourDeskripsi"]);
-
+    $yourProdi = htmlspecialchars($data["yourProdi"]);
+    $yourWaktu = htmlspecialchars($data["yourWaktu"]);
     //upload gambar
     $yourGambar = upload();
     if(!$yourGambar){
         return false;
     }
     
-    $query = "INSERT INTO db_informasi VALUES ('','$yourDeskripsi','$yourGambar')";
+    $query = "INSERT INTO db_informasi VALUES ('','$yourDeskripsi','$yourGambar','$yourProdi','$yourWaktu')";
 
     mysqli_query($conn,$query);
 
@@ -55,6 +56,8 @@ function ubahInfo($data){
 
     $id=$data["id"];
     $yourDeskripsi = htmlspecialchars($data["yourDeskripsi"]);
+    $yourProdi = htmlspecialchars($data["yourProdi"]);
+    $yourWaktu = htmlspecialchars($data["yourWaktu"]);
     $yourGambar = upload();
     if(!$yourGambar){
         return false;
@@ -62,7 +65,9 @@ function ubahInfo($data){
 
     $query = "UPDATE db_informasi SET 
     deskripsi='$yourDeskripsi',
-    gambar='$yourGambar'
+    gambar='$yourGambar',
+    prodi='$yourProdi',
+    waktu='$yourWaktu'
     WHERE id=$id
     ";
 

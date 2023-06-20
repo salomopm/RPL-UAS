@@ -6,7 +6,7 @@ error_reporting(0);
  
 session_start();
  
-if (isset($_SESSION['nama'])) {
+if (isset($_SESSION['nama']))  {
     header("Location: login.php");
 }
  
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
         $sql = "SELECT * FROM db_mahasiswaunsharing WHERE email='$email'";
         $result = mysqli_query($conn, $sql);
         if (!$result->num_rows > 0) {
-            $sql = "INSERT INTO db_mahasiswaunsharing VALUES ('','$nama', '$prodi', '$fakultas', '$email', '$password')";
+            $sql = "INSERT INTO db_mahasiswaunsharing VALUES ('','$nama', '$prodi', '$fakultas', '$email', '$password','$roleAs')";
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 echo "<script>alert('Selamat, registrasi berhasil!')</script>";
@@ -30,6 +30,7 @@ if (isset($_POST['submit'])) {
                 $prodi = "";
                 $fakultas = "";
                 $email = "";
+                $roleAs = "Mahasiswa";
                 $_POST['password'] = "";
                 $_POST['cpassword'] = "";
             } else {

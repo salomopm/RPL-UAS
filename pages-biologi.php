@@ -1,6 +1,6 @@
 <?php 
 require 'db_functions.php';
-$db_informasi = query('SELECT * FROM db_informasi WHERE prodi="Biologi"');
+$db_informasi = query('SELECT * FROM db_informasi WHERE prodi="Biologi" ORDER BY waktu DESC');
 session_start();
  
 if (!isset($_SESSION['username'])) {

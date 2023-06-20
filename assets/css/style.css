@@ -42,6 +42,12 @@ h6 {
   transition: all 0.3s;
 }
 
+#main-beranda{
+  margin-top: 60px;
+  padding-right: 10%;;
+  transition: all 0.3s;
+}
+
 @media (max-width: 1199px) {
   #main {
     padding: 20px;

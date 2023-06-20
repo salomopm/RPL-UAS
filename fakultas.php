@@ -354,7 +354,7 @@ if (!isset($_SESSION['username'])) {
 
                             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                               <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                                <a href="pages-biologi.php" class="list-group-item list-group-item-action">Prodi Biologi</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
                               </div>

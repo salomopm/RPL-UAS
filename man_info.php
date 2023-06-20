@@ -1,6 +1,6 @@
 <?php
 require 'db_functions.php';
-$db_informasi = query('SELECT * FROM db_informasi');
+$db_informasi = query('SELECT * FROM db_informasi ORDER BY waktu DESC');
 
 ?>
 
@@ -92,6 +92,8 @@ $db_informasi = query('SELECT * FROM db_informasi');
                         <td>Aksi</td>
                         <td>Deskripsi</td>
                         <td>Gambar</td>
+                        <td>Prodi</td>
+                        <td>Waktu</td>
                     </tr>
                     <tr>
                         <?php $i = 1; ?>
@@ -106,6 +108,8 @@ $db_informasi = query('SELECT * FROM db_informasi');
                             <img src="image/<?= $row["gambar"]?>" alt="none" width="80px" height="60px">
                             
                         </td>
+                        <td><?= $row["prodi"]?></td>
+                        <td><?= $row["waktu"]?></td>
                     </tr>
                         <?php $i++;?>
                         <?php endforeach;?>
