@@ -62,42 +62,43 @@ if (!isset($_SESSION['username'])) {
 
       <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
-          <li class="nav-item dropdown">
+          <!--<li class="nav-item dropdown">
             <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
               <i class="bi bi-bell"></i>
 
-              <span class="badge bg-primary badge-number">?</span>
-            </a><!-- End Notification Icon -->
+              <span class="badge bg-primary badge-number">1</span>
+            </a>--><!-- End Notification Icon -->
 
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <!--<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
               <li class="dropdown-header">
-                Ada informasi
+                Ada notifikasi baru
 
-                <a href="pages-sainsData.php"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
               </li>
 
               <li>
                 <hr class="dropdown-divider">
               </li>
 
-              <!--<li class="notification-item">
+              <li class="notification-item">
                 <i class="bi bi-exclamation-circle text-warning"></i>
 
                 <div>
                   <h4>Lorem Ipsum</h4>
 
                   <p>Quae dolorem earum veritatis oditseno</p>
+
                   <p>30 min. ago</p>
                 </div>
-              </li>-->
+              </li>
 
               <li>
                 <hr class="dropdown-divider">
               </li>
               <li class="dropdown-footer">
-                <a href="pages-sainsData.php">Tampilkan informasi</a>
+                <a href="#">Tampilkan notifikasi</a>
               </li>
-            </ul><!-- End Notification Dropdown Items -->
+            </ul>--><!-- End Notification Dropdown Items -->
           <!--</li>--><!-- End Notification Nav -->
 
           <li class="nav-item dropdown pe-3">
