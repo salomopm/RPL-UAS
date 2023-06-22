@@ -151,7 +151,7 @@ if (!isset($_SESSION['username'])) {
           <a class="nav-link collapsed" href="profileUser.php">
             <img src="assets/img/profil-logo.png" alt="" height="20" width="20">
 
-            <span>Profile</span>
+            <span>Profil</span>
           </a>
         </li><!-- End Profile Page Nav -->
 
@@ -193,37 +193,38 @@ if (!isset($_SESSION['username'])) {
                   </thead>
                   <tbody>
                     <tr>
-
-                        <!--<div class="accordion accordion-flush" id="accordionFlushExample">
+                      <td>
+                        <div class="accordion accordion-flush" id="accordionFlushExample1">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseA" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Ekonomi dan Bisnis
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseA" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample1">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
                               </div>
                             </div>
-                          </div>-->
-                      
+                          </div>
+                        </div>
+                      </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample2">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseB" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Hukum
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseB" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -236,15 +237,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample3">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseC" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Ilmu Budaya
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseC" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample3">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">Prodi Bahasa Mandarin dan Kebudayaan Tiongkok</a>
                                 <a href="#" class="list-group-item list-group-item-action">Prodi Ilmu Sejarah</a>
@@ -260,15 +261,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample4">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseD" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Ilmu Sosial dan Ilmu Politik
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseD" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample4">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a  href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -281,15 +282,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample5">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseE" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Kedokteran
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseE" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample5">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -302,15 +303,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample6">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseF" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Keguruan dan Ilmu Pendidikan
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseF" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample6">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -323,15 +324,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample7">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseG" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Keolahragaan
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseG" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample7">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -344,15 +345,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample8">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseH" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Matematika dan Ilmu Pengetahuan Alam
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseH" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample8">
                               <div class="list-group">
                                 <a href="pages-biologi.php" class="list-group-item list-group-item-action">Prodi Biologi</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -365,15 +366,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample9">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseI" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Pertanian
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseI" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample9">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -386,15 +387,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample11">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseJ" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Peternakan
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseJ" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample11">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -407,15 +408,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample12">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseK" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Psikologi
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseK" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample12">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -428,15 +429,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample13">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseL" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Seni Rupa dan Desain
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseL" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample13">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -449,15 +450,15 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample14">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseM" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Teknik
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseM" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample14">
                               <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
@@ -470,18 +471,18 @@ if (!isset($_SESSION['username'])) {
 
                     <tr>
                       <td>
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample15">
                           <div class="accordion-item">
                             <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseN" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Fakultas Teknologi Informasi dan Sains Data
                               </button>
                             </h2>
 
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseN" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample15">
                               <div class="list-group">
-                                <a href="pages-sainsData.php" class="list-group-item list-group-item-action">Prodi Sains Data</a>
-                                <a href="#" class="list-group-item list-group-item-action">Prodi Teknologi Informasi</a>
+                                <a href="pages-informatika.php" class="list-group-item list-group-item-action">Prodi Informatika</a>
+                                <a href="#" class="list-group-item list-group-item-action">Prodi Sains Data</a>
                               </div>
                             </div>
                           </div>

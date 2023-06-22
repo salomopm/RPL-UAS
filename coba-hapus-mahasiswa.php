@@ -7,12 +7,12 @@ $id=$_GET["id"];
 if(hapus($id) > 0){
     echo "<script>
     alert('Hapus Data Berhasil');
-    document.location.href='man_mah.php';
+    document.location.href='coba-man-mah.php';
     </script>";
 }else{
     echo "<script>
     alert('Hapus Data Gagal')
-    document.location.href='man_mah.php';
+    document.location.href='coba-man-mah.php';
     </script>";
     
 }

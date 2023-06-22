@@ -7,6 +7,8 @@ $output = ob_get_contents();
 $output = ob_get_contents();
 $db_informasi = query("SELECT A.deskripsi, A.gambar, A.prodi, A.waktu FROM db_informasi A INNER JOIN db_mahasiswaunsharing B ON A.prodi=B.prodi WHERE A.prodi='$output' GROUP BY A.waktu DESC");
 
+$db_informasi = query('SELECT * FROM db_informasi WHERE prodi="Biologi" ORDER BY waktu DESC');
+session_start();
 
 if (!isset($_SESSION['username'])) {
   header("Location: login.php");
@@ -66,14 +68,27 @@ if (!isset($_SESSION['username'])) {
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              <i class="bi bi-bell"></i>
 
-              <span class="badge bg-primary badge-number">1</span>
-            </a> --> <!-- End Notification Icon -->
+        <!--<div class="dropdown">
+          <button type="button" class="btn btn-primary" data-toggle="dropdown">
+            Notifications <span class="badge badge-light" id="notif"></span>
+          </button>
+          <div id="deskripsi" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-        <!--<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+          </div>
+        </div>-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+
+            <span class="badge bg-primary badge-number" id="notif"></span>
+          </a> <!-- End Notification Icon -->
+
+          <div id="deskripsi" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+            <!--<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
               <li class="dropdown-header">
                 Ada notifikasi baru
 
@@ -109,7 +124,7 @@ if (!isset($_SESSION['username'])) {
                 <a href="#">Tampilkan notifikasi</a>
               </li>
             </ul> --> <!-- End Notification Dropdown Items -->
-        <!--</li> --> <!-- End Notification Nav -->
+        </li> <!-- End Notification Nav -->
 
         <li class="nav-item dropdown pe-3">
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -187,13 +202,12 @@ if (!isset($_SESSION['username'])) {
         </a>
       </li><!-- End Keluar Page Nav -->
     </ul>
+
   </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
     <div class="pagetitle">
       <h1>Beranda</h1>
-
-
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
@@ -206,51 +220,56 @@ if (!isset($_SESSION['username'])) {
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur dolorum perspiciatis fugiat, deserunt dolorem fuga assumenda eius, praesentium vitae, obcaecati corrupti sit aliquid eum voluptatum iure facere doloribus. Error, soluta?
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iste id atque cum, accusantium possimus sapiente incidunt fugit. Voluptatum expedita nesciunt architecto cum debitis eius nam error veritatis aperiam id.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <main id="main-beranda" class="main">
-      <?php $i = 1; ?>
-      <?php foreach ($db_informasi as $row) : ?>
-        <section class="section dashboard">
-          <div class="col-12">
-            <div class="card recent-sales overflow-auto">
-              <div>
-                <div class="container">
-                  <div class="col-md-7">
-                    <h3>Informasi Prodi</h3>
+            <?php $i = 1; ?>
+            <?php foreach ($db_informasi as $row) : ?>
+              <section class="section dashboard">
+                <div class="col-12">
+                  <div class="card recent-sales overflow-auto">
+                    <div>
+                      <div class="container">
+                        <div class="col-md-7">
+                          <h3>Informasi Prodi <?php echo $row['prodi'] ?></h3>
 
-                    <div class="social-feed-box">
-                      <div class="social-avatar">
-                        <a href="" class="pull-left">
-                          <img alt="image" src="assets/img/profil-logo.png">
-                        </a>
+                          <div class="social-feed-box">
+                            <div class="social-avatar">
+                              <a href="" class="pull-left">
+                                <img alt="image" src="assets/img/profil-logo.png">
+                              </a>
 
-                        <div class="media-body">
-                          <a href="#">
-                            Admin <?php echo $row['prodi']?>
-                          </a>
-                          <small class="text-muted" id="clock"></small>
+                              <div class="media-body">
+                                <a href="#">
+                                  Admin <?php echo $row['prodi'] ?>
+                                </a>
+                                <small class="text-muted" id="clock"></small>
+                              </div>
+                            </div>
+                            <div class="social-body">
+                              <div class="deskripsi-pageSainsData">
+                                <?= $row["deskripsi"] ?>
+                              </div>
+                              <img src="image/<?= $row["gambar"] ?>" class="img-responsive">
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="social-body">
-                        <div class="deskripsi-pageSainsData">
-                          <?= $row["deskripsi"] ?>
-                        </div>
-                        <img src="image/<?= $row["gambar"] ?>" class="img-responsive">
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </section>
+              <?php $i++; ?>
+            <?php endforeach; ?>
           </div>
-        </section>
-        <?php $i++; ?>
-      <?php endforeach; ?>
-    </main><!-- End #main -->
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+
+
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -266,6 +285,14 @@ if (!isset($_SESSION['username'])) {
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!--p-notif-mungkin-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="coba_tampil.js"></script>
+  </main>
 </body>
 
 </html>

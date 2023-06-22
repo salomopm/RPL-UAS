@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>sains-data-uns-sharing</title>
+  <title>informatika-uns-sharing</title>
 
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -114,6 +114,22 @@ if (!isset($_SESSION['username'])) {
       </li><!-- End Beranda Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed" href="profileUser.php">
+          <img src="assets/img/profil-logo.png" alt="" height="20" width="20">
+
+          <span>Profil</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="fakultas.php">
+          <img src="assets/img/listImg.png" alt="" height="20" width="20">
+
+          <span>Fakultas</span>
+        </a>
+      </li><!-- End Fakultas Nav -->
+
+      <li class="nav-item">
         <a class="nav-link collapsed" href="logout.php">
           <img src="assets/img/keluarImg.png" alt="" height="20" width="20">
 
@@ -143,13 +159,13 @@ if (!isset($_SESSION['username'])) {
 
                       <div class="media-body">
                         <a href="#">
-                          Admin Sains Data
+                          Admin Informatika
                         </a>
                         <small class="text-muted" id="clock"></small>
                       </div>
                     </div>
                     <div class="social-body">
-                      <div class="deskripsi-pageSainsData">
+                      <div class="deskripsi-pageInformatika">
                         <?= $row["deskripsi"] ?>
                       </div>
                       <img src="image/<?= $row["gambar"] ?>" class="img-responsive">
